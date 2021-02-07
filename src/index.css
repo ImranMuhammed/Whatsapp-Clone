@@ -83,6 +83,37 @@ code {
   font-size: 15px;
 }
 
+/*=============  Sidebar Chat CSS ================*/
+
+.sidebarChat_container{
+  display: flex;
+  flex-direction:column;
+  margin-top:20px;
+  background-color: white;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x:scroll;
+}
+.sidebarChat_list{
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  align-items: center; 
+  border-bottom: 0.5px solid  rgb(230, 230, 230);
+}
+.sidebarChat_list:hover{
+  background-color: #dadbd3;
+  cursor: pointer;
+}
+
+.sidebarChat_contact{
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+}
+
 /*=============  Chat CSS ================*/
 .chat{
   display: flex;

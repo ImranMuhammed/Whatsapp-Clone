@@ -4,6 +4,7 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {Avatar , IconButton} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
+import SidebarChatList from './SidebarChatList';
 
 export default function Sidebar() {
     return (
@@ -28,6 +29,7 @@ export default function Sidebar() {
                     <input type="text" placeholder="Enter the name of the contact" />
                 </div>
             </div>
+            <SidebarChatList/>
         </div>
         
     )
