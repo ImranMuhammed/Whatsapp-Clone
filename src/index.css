@@ -32,3 +32,60 @@ code {
   width: 90vw;
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
 }
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  flex:0.35;
+}
+
+.sidebar-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-right: 1px solid lightgray;
+}
+
+.header-rightside-icons{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-width: 10vh;
+}
+
+.sidebar_search_container{
+  display: flex;
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  height:50x;
+  padding:10px;
+  border:1px solid lightgray;
+}
+.sidebar_searchBox > .MuiSvgIcon-root{
+  color:gray;
+}
+
+.sidebar_searchBox{
+ display: flex;
+ align-items: center;
+ border-radius: 20px;
+ width:100%;
+ background-color: white;
+ height: 20px;
+ padding: 10px;
+}
+
+.sidebar_searchBox>input{
+  border: none;
+  outline-width: 0;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 15px;
+}
+
+/*=============  Chat CSS ================*/
+.chat{
+  display: flex;
+  flex-direction: column;
+  flex:0.35;
+}

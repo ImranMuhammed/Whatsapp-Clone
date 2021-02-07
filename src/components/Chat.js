@@ -2,8 +2,11 @@ import React from 'react'
 
 export default function Chat() {
     return (
-        <h1>
+        <div className="chat">
+             <h1>
             This is Chat bar
-        </h1>
+            </h1>
+        </div>
+       
     )
 }
