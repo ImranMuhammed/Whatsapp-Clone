@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import contacts from './Contacts'
 import SearchIcon from '@material-ui/icons/Search';
 import SidebarContact from './SidebarContact'
+import {Avatar , IconButton} from '@material-ui/core';
 
 
 export default function SidebarChatList(props) {
@@ -23,12 +24,28 @@ export default function SidebarChatList(props) {
                 {
                     searchedName==''?
                     contacts.map((contact,index)=>{
-                        return( <SidebarContact key={index} contact={contact} /> )
+                        return( 
+                                <div className="sidebarChat_list" >
+                                    <Avatar/>
+                                    <div className="sidebarChat_contact">
+                                    {<h3>{contact.name}</h3> } 
+                                    {<small>{contact.lastMessage}</small> } 
+                                    </div>    
+                                </div> 
+                            )
                     }) :
                     contacts.map((contact,index)=>
                         {
                             if(contact.name.toLowerCase().includes(searchedName.toLowerCase())){
-                           return  <SidebarContact key={index} contact={contact}/>
+                           return (
+                                    <div className="sidebarChat_list" >
+                                        <Avatar/>
+                                        <div className="sidebarChat_contact">
+                                        {<h3>{contact.name}</h3> } 
+                                        {<small>{contact.lastMessage}</small> } 
+                                        </div>    
+                                    </div> 
+                                )
                             }
                         } 
                     )
