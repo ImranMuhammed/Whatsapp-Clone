@@ -6,10 +6,10 @@ import Chat from './components/Chat';
 function App() {
   return (
     <div className="app">
-     <div className="app-body">
-       <Sidebar />
-       <Chat />
-     </div>
+      <div className="app-body">
+        <Sidebar />
+        <Chat />
+      </div>
     </div>
   );
 }
