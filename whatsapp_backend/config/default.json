@@ -1,0 +1,16 @@
+{
+    "config":{
+        "dbConfig":{
+            "host":"localhost",
+            "name":"whatsappMERN",
+            "options":{
+                "useNewUrlParser":true,
+                "useCreateIndex":true,
+                "useFindAndModify":true
+            }
+        },
+        "server":{
+            "port":8012
+        }
+    }
+}
