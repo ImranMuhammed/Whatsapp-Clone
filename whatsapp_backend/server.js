@@ -20,6 +20,8 @@ mongoose.connect(dbUri,dbOptions)
 .then(()=>console.log("Mongo Server is connected"))
 .catch(()=>console.log("Some error occured while connecting to mongo server"))
 
+const db=mongoose.connection;
+
 app.listen(PORT,()=>{
     console.log("Express Server is connected at PORT:"+PORT);
 })

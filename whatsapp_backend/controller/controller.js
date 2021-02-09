@@ -7,7 +7,7 @@ const addMessage=async(req,res)=>{
         const timeStamp=req.body.timeStamp;
         const received=req.body.received;
 
-        const newConversationDoc={
+        var newConversationDoc={
             contactNumber:contactNumber,
             message:message,
             timeStamp:timeStamp,
