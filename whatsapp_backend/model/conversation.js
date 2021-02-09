@@ -2,9 +2,8 @@ const mongoose=require('mongoose')
 
 const conversationSchema=new mongoose.Schema({
     contactNumber:{
-        type:Number,
-        required:true,
-        unique:true    
+        type:String,
+        required:true   
     },
     message:{
         type:String,
@@ -12,8 +11,7 @@ const conversationSchema=new mongoose.Schema({
     },
     timeStamp:{
         type:String,
-        required:true,
-        default:new Date().toLocaleString()
+        required:true
     },
     received:{
         type:Boolean,
@@ -22,4 +20,6 @@ const conversationSchema=new mongoose.Schema({
     }
 })
 
-module.exports=mongoose.model(conversation,conversationSchema);
+const ChatModel=mongoose.model('ChatModel',conversationSchema)
+
+module.exports=ChatModel;
