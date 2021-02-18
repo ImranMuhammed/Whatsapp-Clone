@@ -3,11 +3,12 @@ import SearchIcon from '@material-ui/icons/Search';
 import {Avatar , IconButton} from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import {getAllContacts} from '../services/contactsService'
-import { cleanup } from '@testing-library/react';
+import SidebarChat from './SidebarChat'
 
 export default function SidebarChatList(props) {
     const[searchedName,setSearchedName]=useState('')
     const[contacts,setContacts]=useState([]);
+    const lastMessage=[];
 
     useEffect(async() => {
         const contactsList= await getAllContacts();
@@ -31,16 +32,9 @@ export default function SidebarChatList(props) {
                     searchedName==''?
                   contacts!=undefined &&  contacts.map((contact,index)=>{
                         return( 
-                            <Link key={index}   to={`/${contact._id}`} >
-                                <div className="sidebarChat_list">
-                                    <Avatar src={contact.profilePicture} />
-                                    <div className="sidebarChat_contact">
-                                    {<h3>{contact.name}</h3> } 
-                                    {<small>{contact.lastMessage}</small> } 
-                                    </div>    
-                                </div> 
-                            </Link>
-                                
+                            <Link key={index}   to={`/${contact._id}`}>
+                                <SidebarChat contact={contact} />
+                            </Link>                               
                             )
                     }) :
                   contacts!=undefined &&  contacts.map((contact,index)=>
@@ -48,13 +42,7 @@ export default function SidebarChatList(props) {
                             if(contact.name.toLowerCase().includes(searchedName.toLowerCase())){
                            return (
                                <Link key={index}  to={`/${contact._id}`} >
-                                    <div className="sidebarChat_list" >
-                                        <Avatar src={contact.profilePicture} />
-                                        <div className="sidebarChat_contact">
-                                        {<h3>{contact.name}</h3> } 
-                                        {<small>{contact.lastMessage}</small> } 
-                                        </div>    
-                                    </div> 
+                                    <SidebarChat contact={contact} />
                                </Link>
                                     
                                 )

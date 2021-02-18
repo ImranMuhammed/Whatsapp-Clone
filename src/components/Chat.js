@@ -6,7 +6,7 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import MicIcon from '@material-ui/icons/Mic';
 import {IconButton} from '@material-ui/core';
 import {sendMessage} from '../services/chatService'
-import { getContactDetails} from '../services/contactsService'
+import {getContactDetails} from '../services/contactsService'
 
 export default function Chat(props) {
     const[newText,setNewText]=useState('')
@@ -27,7 +27,7 @@ export default function Chat(props) {
     return (
         contact!=undefined &&
         <div className="chat">
-             <ChatHeader contact={{name:contact.name,profilePicture:contact.profilePicture}} />
+             <ChatHeader contact={{name:contact.name,profilePicture:contact.profilePicture,lastSeen:contact.lastSeen}} />
              <ChatBody contactNumber={contact.number} />
              <div className="chat-footer">
 

@@ -14,7 +14,7 @@ export default function ChatHeader(props) {
                 </div>      
                 <div className="chat-contact-recent">
                     <h3>{props.contact.name}</h3>
-                    <p>Last Seen</p>
+                    <p>{props.contact.lastSeen}</p>
                 </div>
              </div>
                 
