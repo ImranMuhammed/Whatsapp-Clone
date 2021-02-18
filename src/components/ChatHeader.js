@@ -4,16 +4,16 @@ import SearchIcon from '@material-ui/icons/Search';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
+export default function ChatHeader(props) {
 
-export default function ChatHeader() {
     return (
         <div className="chat-header-container">
              <div className="chat-contact-details">
                 <div>
-                    <Avatar />
+                    <Avatar src={props.contact.profilePicture} />
                 </div>      
                 <div className="chat-contact-recent">
-                    <h3>Name</h3>
+                    <h3>{props.contact.name}</h3>
                     <p>Last Seen</p>
                 </div>
              </div>
