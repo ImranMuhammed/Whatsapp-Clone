@@ -41,13 +41,15 @@ db.once("open",()=>{
     
     const changeStream=msgCollection.watch();
     changeStream.on('change', (change)=>{
-        console.log("A change occured ", change)
+        console.log("A change occured ")
 
         if(change.operationType==='insert'){
             const messageDetails=change.fullDocument;
             pusher.trigger('messages','inserted',{
-                name:messageDetails.contactNumber,
-                message:messageDetails.message
+                contactNumber:messageDetails.contactNumber,
+                message:messageDetails.message,
+                timeStamp:messageDetails.timeStamp,
+                received:messageDetails.received
             })        
         }
         else{

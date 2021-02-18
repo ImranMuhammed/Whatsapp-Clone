@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
-import contacts from './Contacts'
+import React, { useContext, useState,useEffect } from 'react'
 import SearchIcon from '@material-ui/icons/Search';
-import SidebarContact from './SidebarContact'
 import {Avatar , IconButton} from '@material-ui/core';
-
+import { Link } from 'react-router-dom';
+import {getAllContacts} from '../services/contactsService'
+import { cleanup } from '@testing-library/react';
 
 export default function SidebarChatList(props) {
     const[searchedName,setSearchedName]=useState('')
+    const[contacts,setContacts]=useState([]);
+
+    useEffect(async() => {
+        const contactsList= await getAllContacts();
+        setContacts(contactsList)
+    }, [])
 
     return (<>
             <div className="sidebar_search_container">
@@ -23,28 +29,34 @@ export default function SidebarChatList(props) {
             <div className="sidebarChat_container">
                 {
                     searchedName==''?
-                    contacts.map((contact,index)=>{
+                  contacts!=undefined &&  contacts.map((contact,index)=>{
                         return( 
-                                <div className="sidebarChat_list" >
-                                    <Avatar/>
+                            <Link key={index}   to={`/${contact._id}`} >
+                                <div className="sidebarChat_list">
+                                    <Avatar src={contact.profilePicture} />
                                     <div className="sidebarChat_contact">
                                     {<h3>{contact.name}</h3> } 
                                     {<small>{contact.lastMessage}</small> } 
                                     </div>    
                                 </div> 
+                            </Link>
+                                
                             )
                     }) :
-                    contacts.map((contact,index)=>
+                  contacts!=undefined &&  contacts.map((contact,index)=>
                         {
                             if(contact.name.toLowerCase().includes(searchedName.toLowerCase())){
                            return (
+                               <Link key={index}  to={`/${contact._id}`} >
                                     <div className="sidebarChat_list" >
-                                        <Avatar/>
+                                        <Avatar src={contact.profilePicture} />
                                         <div className="sidebarChat_contact">
                                         {<h3>{contact.name}</h3> } 
                                         {<small>{contact.lastMessage}</small> } 
                                         </div>    
                                     </div> 
+                               </Link>
+                                    
                                 )
                             }
                         } 

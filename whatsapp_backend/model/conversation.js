@@ -1,7 +1,11 @@
 const mongoose=require('mongoose')
 
 const conversationSchema=new mongoose.Schema({
-    contactNumber:{
+    name:{
+        type:String,
+        required:true
+    },
+    number:{
         type:String,
         required:true   
     },

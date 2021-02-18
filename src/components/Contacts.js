@@ -1,27 +1,27 @@
 const contacts=[
     {
         name:"Mohammed Imran",
-        lastMessage:"Hello"
+        contactNumber:"111111111"
     },
     {
         name:"Raj",
-        lastMessage:"Hello"
+        contactNumber:"2222222222"
     },
     {
         name:"Santosh",
-        lastMessage:"Hello"
+        lastMessage:"333333333"
     },
     {
         name:"Rahul",
-        lastMessage:"Hello"
+        lastMessage:"444444444"
     },
     {
         name:"Manuel",
-        lastMessage:"Hello"
+        lastMessage:"555555555"
     },
     {
-        name:"Quashid",
-        lastMessage:"Hello"
+        name:"Quarantine",
+        lastMessage:"666666666"
     },
 
 ]
