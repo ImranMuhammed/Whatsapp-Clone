@@ -3,8 +3,8 @@
         "dbConfig":{
             "host":"localhost",
             "name":"whatsappDB",
-            "user":"m001-student",
-            "password":"m001-mongodb-basics",
+            "user":"",
+            "password":"",
             "options":{
                 "useNewUrlParser":true,
                 "useCreateIndex":true,

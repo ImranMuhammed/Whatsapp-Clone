@@ -155,6 +155,7 @@ code {
   display: flex;
   flex-direction: column;
   background:url(https://i.ibb.co/q9mygMq/background.jpg);
+  filter: grayscale(10%);
   height: 100%;
   padding: 30px;
   overflow-y: scroll;
@@ -171,7 +172,7 @@ code {
 }
 .text-received{
   margin-right: auto;
-  background-color: #fff;
+  background-color: white;
 }
 .text-sent{
   margin-left: auto;

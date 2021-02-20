@@ -15,11 +15,7 @@ const PORT=config.get('config.server.port')
 const app=express();
 
 const pusher = new Pusher({
-    appId: "1153202",
-    key: "432d39f38726b0f4c850",
-    secret: "d51d46950f437d05dfef",
-    cluster: "ap2",
-    useTLS: true
+    /* Go to pusher.com and create a whatsapp channel and add the config here.  */ 
   });
  
 
