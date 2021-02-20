@@ -2,6 +2,9 @@
 
 This project is a clone of Real time chat application 'Whatsapp' built using MERN stack.
 
+![Whatsapp_screenshot](https://user-images.githubusercontent.com/70046882/108588810-2f82aa80-7381-11eb-8e0c-631f1a59b944.jpg)
+
+
 ## How to run the project in your system
 
 To run the project in your local system:
